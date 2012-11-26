@@ -1,0 +1,138 @@
+/*
+* Quickstarter V0.1
+* Copyright 2012, Alejandro Chavazza
+* www.quickstarter.com.ar
+* Quickstarter is free, libre and public domain see more on http://unlicense.org/
+* 04/11/2012
+*/
+
+
+/* Table of Contents
+======================================================================================================
+    #Grid
+    #Row
+    #Quads & Triads
+    #Prefixes & Suffixes
+    #Push & Pull
+    #Debug
+    */
+
+
+/* #Grid - Container
+======================================================================================================*/
+
+.grid{
+  margin-left: auto;
+  margin-right: auto;
+
+  /* if doesn't have @media support - If you want fluid, remove it */
+  width: 960px;
+}
+
+/* #Row - no more .alpha or .omega, instead we had .row
+======================================================================================================*/
+.row{
+  margin-left: -10px;
+  margin-right: -10px;
+  clear: both;
+}
+
+/* #Quads & Triads - Init
+======================================================================================================*/
+.quad-1,  .quad-2,  .quad-3,  .quad-4,
+.triad-1, .triad-2, .triad-3{
+          display: inline;
+          float: left;
+          padding-left: 10px;
+          padding-right: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid .quad-1  {width: 25%}
+.grid .quad-2  {width: 50%}
+.grid .quad-3  {width: 75%}
+.grid .quad-4  {width: 100%}
+
+.grid .triad-1  {width: 33.3333%}
+.grid .triad-2  {width: 66.6666%}
+.grid .triad-3  {width: 100%}
+
+
+/* #Prefixes & Suffixes
+======================================================================================================*/
+.grid .quad-prefix-0  {margin-left: 0}
+.grid .quad-prefix-1  {margin-left: 25%}
+.grid .quad-prefix-2  {margin-left: 50%}
+.grid .quad-prefix-3  {margin-left: 75%}
+.grid .quad-prefix-4  {margin-left: 100%}
+
+.grid .triad-prefix-0  {margin-left: 0}
+.grid .triad-prefix-1  {margin-left: 33.3333%}
+.grid .triad-prefix-2  {margin-left: 66.6666%}
+.grid .triad-prefix-3  {margin-left: 100%}
+
+.grid .quad-suffix-0  {margin-right: 0}
+.grid .quad-suffix-1  {margin-right: 25%}
+.grid .quad-suffix-2  {margin-right: 50%}
+.grid .quad-suffix-3  {margin-right: 75%}
+.grid .quad-suffix-4  {margin-right: 100%}
+
+.grid .triad-suffix-0  {margin-right: 0}
+.grid .triad-suffix-1  {margin-right: 33.3333%}
+.grid .triad-suffix-2  {margin-right: 66.6666%}
+.grid .triad-suffix-3  {margin-right: 100%}
+
+
+/* #Push & Pull
+======================================================================================================*/
+
+.grid .quad-push-0,  .grid .quad-push-1,  .grid .quad-push-2,  .grid .quad-push-3,  .grid .quad-push-4,
+.grid .quad-pull-0,  .grid .quad-pull-1,  .grid .quad-pull-2,  .grid .quad-pull-3,  .grid .quad-pull-4,
+.grid .triad-push-0, .grid .triad-push-1, .grid .triad-push-2, .grid .triad-push-3,
+.grid .triad-pull-0, .grid .triad-pull-1, .grid .triad-pull-2, .grid .triad-pull-3  {
+   position: relative
+}
+
+.grid .quad-pull-0  {right: 0}
+.grid .quad-pull-1  {right: 25%}
+.grid .quad-pull-2  {right: 50%}
+.grid .quad-pull-3  {right: 75%}
+.grid .quad-pull-4  {right: 100%}
+
+.grid .quad-push-0  {left: 0}
+.grid .quad-push-1  {left: 25%}
+.grid .quad-push-2  {left: 50%}
+.grid .quad-push-3  {left: 75%}
+.grid .quad-push-4  {left: 100%}
+
+.grid .triad-pull-0  {right: 0}
+.grid .triad-pull-1  {right: 33.3333%}
+.grid .triad-pull-2  {right: 66.6666%}
+.grid .triad-pull-3  {right: 100%}
+
+.grid .triad-push-0  {left: 0}
+.grid .triad-push-1  {left: 33.3333%}
+.grid .triad-push-2  {left: 66.6666%}
+.grid .triad-push-3  {left: 100%}
+
+/* #Debug
+======================================================================================================*/
+
+.debug .row{
+  background: none repeat scroll 0 0 rgba(0, 0, 255, 0.1) !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.1) inset !important;
+}
+
+.debug .quad-1,  
+.debug .quad-2,  
+.debug .quad-3,  
+.debug .quad-4,
+.debug .triad-1, 
+.debug .triad-2, 
+.debug .triad-3{
+  background: rgba(255,0,0,0.1) !important; 
+  background-clip: content-box !important;
+}

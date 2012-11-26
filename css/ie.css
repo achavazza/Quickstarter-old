@@ -1,0 +1,31 @@
+/*
+* Quickstarter V0.1
+* Copyright 2012, Alejandro Chavazza
+* www.quickstarter.com.ar
+* Quickstarter is free, libre and public domain see more on http://unlicense.org/
+* 04/11/2012
+*/
+
+/* IE7 doesn't suport box-sizing so.. expressions!!!
+   still needs more fix, JS maybe */
+.grid .row{
+   /* emulates width: 100% */
+  width: expression((this.parentNode.clientWidth + 'px');
+  margin: 0 -10px !important;
+}
+
+.grid .quad-1   { /* emulates width: 25%  */ *width: expression((this.parentNode.clientWidth / 4 - 20) + 'px')  !important}
+.grid .quad-2   { /* emulates width: 50%  */ *width: expression(((this.parentNode.clientWidth / 4) * 2) - 20) + 'px')  !important}
+.grid .quad-3   { /* emulates width: 75%  */ *width: expression(((this.parentNode.clientWidth / 4) * 3) - 20) + 'px')  !important}
+.grid .quad-4   { /* emulates width: 100% */ *width: expression(((this.parentNode.clientWidth) - 20) + 'px')   !important}
+
+.grid .triad-1  { /* emulates width: 33% */ *width: expression((this.parentNode.clientWidth/3 - 20) + 'px') !important}
+.grid .triad-2  { /* emulates width: 33% */ *width: expression(((this.parentNode.clientWidth/3) * 2 - 20) + 'px')  !important}
+.grid .triad-3  { /* emulates width: 33% */ *width: expression(((this.parentNode.clientWidth) - 20) + 'px')  !important}
+
+*{
+  *zoom:1  !important!;
+}
+.grid{
+  *width:960px !important!;
+}

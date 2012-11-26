@@ -1,0 +1,203 @@
+/*
+* Quickstarter V0.1
+* Copyright 2012, Alejandro Chavazza
+* www.quickstarter.com.ar
+* Quickstarter is free, libre and public domain see more on http://unlicense.org/
+* 04/11/2012
+*/
+
+/* Table of Contents
+======================================================================================================
+    #Init
+    #Desktop
+	    #Desktop Visible / Invisible
+    #Landscape (960px)
+	    #Landscape Mutate
+	    #Landscape Visible / Invisible
+	    #Debug
+
+    #Portrait  (960px > < 500px)
+	    #Portrait Mutate
+	    #Portrait Visible / Invisible
+	    #Debug
+
+    #Mobile  (> 500px)
+	    #Mobile Reset
+	    #Mobile Mutate
+	    #Mobile Visible / Invisible
+	    #Debug
+    */
+
+
+/* #Init
+======================================================================================================*/
+
+/* #Desktop - Desktop & big screens */
+@media screen and (min-width: 1200px) {
+	.grid{ width: 1200px; }
+
+	/* #Desktop Visible / Invisible - switch on off elements
+	======================================================================================================*/
+	.invisible-desktop { display: none !important; }
+
+	.visible-landscape,
+	.visible-portrait,
+	.visible-mobile { display: none !important; }
+
+	.visible-desktop { display: block !important; }
+
+	/* #Debug
+	======================================================================================================*/
+	.debug.grid{
+		box-shadow: 0 0 0 10px rgba(0,255,0,0.2);
+	}
+}
+/*  #Landscape - Tablet Landscape, Desktop old standards */
+@media screen and (min-width: 980px) and (max-width: 1200px) {
+	.grid{ width: 960px; }
+
+	/* #Landscape Mutate - change and adapt quads
+	======================================================================================================*/
+	.grid .quad-1-landscape{width: 25%}
+	.grid .quad-2-landscape{width: 50%}
+	.grid .quad-3-landscape{width: 75%}
+	.grid .quad-4-landscape{width: 100%}
+
+	.grid .triad-1-landscape{width: 33.3333%}
+	.grid .triad-2-landscape{width: 66.6666%}
+	.grid .triad-3-landscape{width: 100%}
+
+
+	/* #Landscape Visible / Invisible - switch on off elements
+	======================================================================================================*/
+	.invisible-landscape{ display: none !important; }
+
+	.visible-desktop,
+	.visible-portrait,
+	.visible-mobile { display: none !important; }
+
+	.visible-landscape { display: block !important; }
+	
+	/* #Debug
+	======================================================================================================*/
+	.debug.grid{
+		box-shadow: 0 0 0 10px rgba(255,255,0,0.2);
+	}
+
+}
+/* #Portrait - Tablet portrait, Mobile landscape */
+@media screen and (min-width: 768px) and (max-width:980px) {
+	.grid{ width: 700px; }
+
+	/* #Portrait Mutate - change and adapt quads
+	======================================================================================================*/
+	.grid .quad-1-portrait{width: 25%}
+	.grid .quad-2-portrait{width: 50%}
+	.grid .quad-3-portrait{width: 75%}
+	.grid .quad-4-portrait{width: 100%}
+
+	.grid .triad-1-portrait{width: 33.3333%}
+	.grid .triad-2-portrait{width: 66.6666%}
+	.grid .triad-3-portrait{width: 100%}
+
+
+	/* #Portrait Visible / Invisible - switch on off elements
+	======================================================================================================*/
+	.invisible-portrait{
+		display: none !important;
+	}
+	.visible-desktop,
+	.visible-landscape,
+	.visible-mobile { display: none !important; }
+	
+	.visible-portrait { display: block !important; }
+	/* #Debug
+	======================================================================================================*/
+	.debug.grid{
+		box-shadow: 0 0 0 10px rgba(255,150,0,0.2);
+	}
+
+}
+/* #Mobile */
+@media screen and (max-width: 768px){
+	.grid{ width: auto; margin-left: 40px; margin-right: 40px}
+	.row{ margin: 0; }
+
+	/* #Mobile Reset - we reset everything, all quads / triads goes to 100% and now doesen't float
+	======================================================================================================*/
+	.grid .quad-1,.grid .quad-2,.grid .quad-3,.grid .quad-4,
+	.grid .triad-1,.grid .triad-2,.grid .triad-3{
+	          width: auto;
+	          float: none;
+	          padding-left: 0;
+	          padding-right: 0;
+			   display: block;
+
+	}
+	.grid .quad-prefix-0, .grid .quad-prefix-1,.grid .quad-prefix-2,.grid .quad-prefix-3,.grid .quad-prefix-4,
+	.grid .triad-prefix-0,.grid .triad-prefix-1,.grid .triad-prefix-2 ,.grid .triad-prefix-3,
+	.grid .quad-suffix-0,.grid .quad-suffix-1,.grid .quad-suffix-2,.grid .quad-suffix-3,.grid .quad-suffix-4,
+	.grid .triad-suffix-0,.grid .triad-suffix-1,.grid .triad-suffix-2,.grid .triad-suffix-3  {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.grid .quad-push-0, .grid .quad-push-1, .grid .quad-push-2, .grid .quad-push-3, .grid .quad-push-4,
+	.grid .triad-push-0, .grid .triad-push-1, .grid .triad-push-2, .grid .triad-push-3,
+	.grid .quad-pull-0, .grid .quad-pull-1, .grid .quad-pull-2, .grid .quad-pull-3, .grid .quad-pull-4,
+	.grid .triad-pull-0, .grid .triad-pull-1, .grid .triad-pull-2, .grid .triad-pull-3  {
+	   position: static;
+	   left: auto;
+	   right: auto;
+	}
+
+	.form-horizontal .input label,
+	.form-horizontal fieldset legend{
+		width: 100%;
+		float: none;
+		text-align: left;
+		display: block;
+		clear: both;
+		float: none;
+	}
+	.form-horizontal .input form,
+	.form-horizontal .input legend,
+	.form-horizontal .input label,
+	.form-horizontal .input input,
+	.form-horizontal .input textarea,
+	.form-horizontal .input select,
+	.form-horizontal .radio,
+	.form-horizontal .checkbox,
+	.form-horizontal .input,
+	.form-horizontal .submit,
+	.form-horizontal fieldset,
+	.form-horizontal fieldset legend{
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+
+	/* #Mobile Mutate - change and adapt quads
+	======================================================================================================*/
+	/* since every quad / triad mutates to 100% we dont have mutations */
+
+
+	/* #Mobile Visible / Invisible - switch on off elements
+	======================================================================================================*/
+	.invisible-mobile{
+		display: none;
+	}
+	.visible-desktop,
+	.visible-landscape,
+	.visible-portrait { display: none !important; }
+	
+	.visible-mobile { display: block !important; }
+	/* #Debug
+	======================================================================================================*/
+	.debug.grid{
+		box-shadow: 0 0 0 10px rgba(255,0,0,0.2);
+	}
+
+}

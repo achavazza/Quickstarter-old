@@ -1,0 +1,130 @@
+/*
+* Quickstarter V0.1
+* Copyright 2012, Alejandro Chavazza
+* www.quickstarter.com.ar
+* Quickstarter is free, libre and public domain see more on http://unlicense.org/
+* 04/11/2012
+*/
+
+
+
+/* Table of Contents
+======================================================================================================
+    #Basic
+    #Forms
+    #Tables
+    */
+
+/* #Basic styles - For good typographic support
+======================================================================================================*/
+body{
+    /* thanks to http://cssfontstack.com/ */
+    font-family: "Segoe UI", Segoe, Candara, Frutiger, "Frutiger Linotype", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+.h1, .h1 a,
+.h2, .h2 a,
+.h3, .h3 a,
+.h4, .h4 a,
+.h5, .h5 a,
+.h6, .h6 a {
+    display: block;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.h1 { font-size: 24px; }
+.h2 { font-size: 20px; }
+.h3 { font-size: 18px; }
+.h4 { font-size: 16px; }
+.h5 { font-size: 14px; }
+.h6 { font-size: 12px; }
+
+a { text-decoration: none; }
+
+p { margin-bottom: 10px; }
+
+ul.list{
+    list-style: outside disc;
+    margin-left: 1em;
+}
+ol.list{
+    list-style: outside decimal;
+    margin-left: 1em;
+}
+/* #Forms
+======================================================================================================*/
+textarea{
+    resize: vertical;
+}
+
+.form-horizontal{}
+.form-horizontal .input {
+    /*margin: 0 -10px;*/
+}
+.form-horizontal .input input,
+.form-horizontal .input select,
+.form-horizontal .input textarea,
+.form-horizontal .input label,
+.form-horizontal fieldset legend{
+
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+         box-sizing: border-box;
+         margin-bottom: 10px;
+         overflow: hidden;
+         padding: 5px;
+         width: 75%;
+}
+.form-horizontal .input label,
+.form-horizontal fieldset legend {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    padding: 5px 20px 0 5px;
+    text-align: right;
+    width: 25%;
+
+    text-overflow: ellipsis;
+}
+.form-horizontal fieldset{
+    margin-bottom: 10px;
+}
+.form-horizontal .radio,
+.form-horizontal .checkbox{
+    margin-bottom: 5px;
+    margin-left: 25%;
+    padding-top: 5px;
+    width: 75%;
+}
+
+.form-horizontal .checkbox input,
+.form-horizontal .radio input{
+
+}
+.form-horizontal .checkbox label,
+.form-horizontal .radio label{
+
+}
+.form-horizontal .submit {
+        padding-left: 25%;
+}
+.form-horizontal .submit input,
+.form-horizontal .submit button,
+.form-horizontal .submit a.button{
+
+}
+
+/* #Tables
+======================================================================================================*/
+table{
+    width: 100%;
+}
+.table th,
+.table td{
+    border: 1px solid #666;
+    padding: 5px;
+}

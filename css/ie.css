@@ -6,26 +6,55 @@
 * 04/11/2012
 */
 
-/* IE7 doesn't suport box-sizing so.. expressions!!!
-   still needs more fix, JS maybe */
-.grid .row{
-   /* emulates width: 100% */
-  width: expression((this.parentNode.clientWidth + 'px');
-  margin: 0 -10px !important;
-}
+.crop-horizontal,
+.crop-vertical,
+.crop-horizontal .step-2,
+.crop-vertical .step-2 {  *overflow: hidden !important! }
 
-.grid .quad-1   { /* emulates width: 25%  */ *width: expression((this.parentNode.clientWidth / 4 - 20) + 'px')  !important}
-.grid .quad-2   { /* emulates width: 50%  */ *width: expression(((this.parentNode.clientWidth / 4) * 2) - 20) + 'px')  !important}
-.grid .quad-3   { /* emulates width: 75%  */ *width: expression(((this.parentNode.clientWidth / 4) * 3) - 20) + 'px')  !important}
-.grid .quad-4   { /* emulates width: 100% */ *width: expression(((this.parentNode.clientWidth) - 20) + 'px')   !important}
-
-.grid .triad-1  { /* emulates width: 33% */ *width: expression((this.parentNode.clientWidth/3 - 20) + 'px') !important}
-.grid .triad-2  { /* emulates width: 33% */ *width: expression(((this.parentNode.clientWidth/3) * 2 - 20) + 'px')  !important}
-.grid .triad-3  { /* emulates width: 33% */ *width: expression(((this.parentNode.clientWidth) - 20) + 'px')  !important}
-
-*{
-  *zoom:1  !important!;
-}
 .grid{
   *width:960px !important!;
 }
+.grid .quad-1,
+.grid .quad-2,
+.grid .quad-3,
+.grid .quad-4,
+.grid .triad-1,
+.grid .triad-2,
+.grid .triad-3{
+	/* thanks to Schepp - https://github.com/Schepp/box-sizing-polyfill */
+    *behavior: url(/css/boxsizing.htc);
+}
+
+/*reseting visible - invisible */
+
+.invisible-desktop,
+.invisible-landscape,
+.invisible-portrait,
+.invisible-mobile,
+.visible-desktop,
+.visible-landscape,
+.visible-portrait,
+.visible-mobile {
+  *display: none !important;
+}
+.invisible-desktop,
+.invisible-portrait,
+.invisible-mobile,
+.visible-landscape{
+  *display: block !important;
+}
+.grid.debug .quad-1,
+.grid.debug .quad-2,
+.grid.debug .quad-3,
+.grid.debug .quad-4,
+.grid.debug .triad-1,
+.grid.debug .triad-2,
+.grid.debug .triad-3{
+	*background: #FFCECE;
+}
+.grid.debug .row{
+	*background: #E5E5FF;
+}
+
+
+* { *zoom:1  !important!; }
